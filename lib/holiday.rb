@@ -62,10 +62,10 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |k, v|
     puts "#{k}".capitalize + ":"
-    v.each do |holiday, supplies|
-      supplies = supplies.join(", ")
-      holiday = "#{holiday}".split("_").map {|w| w.capitalize}.join(" ")<< ":"
-      puts "  " + holiday + " " + supplies
+    v.each do |k, v|
+      v = v.join(", ")
+      k = "#{k}".split("_").map {|w| w.capitalize}.join(" ") + ":"
+      puts "  " + k + " " + v
     end
   end
 end
